@@ -39,7 +39,7 @@ const startUrl = process.env.ELECTRON_START_URL || url.format({
 5. 루트에 Procfile파일 추가 내용은 아래와 같음
 ```
 react: npm start
-electron: npm run electron
+electron: node src/electron-wait-react
 ```
 6. src에 electron-wait-react.js파일을 추가 내용은 아래와 같음
 ```
@@ -63,6 +63,10 @@ client.on('error', (error) => {
     setTimeout(tryConnection, 1000);
 });
 ```
+7. package.json의 scripts에 ```"dev": "nf start -p 3000"```를 추가.
+
+### Linux환경에서 Electron 문법오류가 날 경우.
+- 오류나 나는 js 파일에 "use strict" 추가
 
 https://github.com/facebookincubator/create-react-app
 https://medium.freecodecamp.com/building-an-electron-application-with-create-react-app-97945861647c
