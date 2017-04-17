@@ -47,6 +47,11 @@ js의 object는 key와 value 쌍으로 이루어져 있다.
 
   여기서 `this`는 생성될 객체의 instance의 `this`이다. 이렇게 생성된 객체의 prototype 객체는 Person.prototype 이다.
 
+- ##### Object.create()
+
+
+
+
 객체에 접근할때는 `obj.key`혹은 `obj[key]`로 접슨할 수 있다. `[]`로 접근하는경우는 굉장히 유용하게 사용할 수 있다.
 
 ```
